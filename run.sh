@@ -1,15 +1,22 @@
 #!/bin/sh
 
-# Executing command: sh run.sh
+# Executing command: sh <relative_path_to_script>/run.sh
+# sh ../gecko-dev-doc/run.sh
+
 # User Input for Debug / Optimized Build
 echo -n "Enter build type: \n 1-Debug \n 2-Optimized \n=>"
 read VAR
 
-# setting alias for Mozilla Build Configuration Files
-alias get_moz_debug="export ~/gecko-dev-doc/mozconfigs/debug/MOZCONFIG"
-alias get_moz_optimized="export ~/gecko-dev-doc/mozconfigs/debug/MOZCONFIG"
+# Getting current script directory
+# It is assumed that gecko-dev-doc and gecko-dev-riscv will be in parallel in one directory
+# Changes can be made with respect to the mozconfig paths relatively
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-# calling alias for suitable Build Configuration
+# Setting alias for Mozilla Build Configuration Files
+alias get_moz_debug="export MOZCONFIG=$SCRIPT_DIR/../gecko-dev-doc/mozconfigs/debug/MOZCONFIG"
+alias get_moz_optimized="export MOZCONFIG=$SCRIPT_DIR/../gecko-dev-doc/mozconfigs/optimized/MOZCONFIG"
+
+# Calling alias for suitable Build Configuration
 if [ $VAR -eq 1 ]
 then
     echo "Getting Ready for Debug Build ..."
