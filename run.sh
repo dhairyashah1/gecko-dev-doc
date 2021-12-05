@@ -6,8 +6,8 @@ echo -n "Enter build type: \n 1-Debug \n 2-Optimized \n=>"
 read VAR
 
 # setting alias for Mozilla Build Configuration Files
-alias get_moz_debug="export /mozconfigs/debug/MOZCONFIG"
-alias get_moz_optimized="export ./mozconfigs/debug/MOZCONFIG"
+alias get_moz_debug="export ~/gecko-dev-doc/mozconfigs/debug/MOZCONFIG"
+alias get_moz_optimized="export ~/gecko-dev-doc/mozconfigs/debug/MOZCONFIG"
 
 # calling alias for suitable Build Configuration
 if [ $VAR -eq 1 ]
