@@ -33,7 +33,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Installing rust for riscv64 if not present
 rustup toolchain install stable-riscv64gc-unknown-linux-gnu
 
-# Addinfg rust target for RV64GC
+# Adding rust target for RV64GC
 rustup target add riscv64gc-unknown-linux-gnu
 
 # Choose Spidermonkey from the Environment creation list
