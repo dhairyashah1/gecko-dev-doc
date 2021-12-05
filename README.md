@@ -57,18 +57,24 @@ git push origin <branch_name>
 For Spidermonkey
 - [x] Generate binary executable for x86
 - [x] Native Compile Spidermonkey on x86
-- [x] Regression testing for x86
+- [x] JIT and JS Regression testing for x86
 - [x] Base JIT skeleton structure for RISC-V
-- [x] Generate binary executable for RISC-V
+- [x] Generate partial binary executable for RISC-V
+- [ ] Generate complete binary executable for RISC-V
 - [x] Study RISC-V architecture
 - [ ] Porting Baseline JIT Compiler and Interpreter to RISC-V
 - [ ] JIT Regression testing on RV64GC Linux platform
 - [ ] JS Regression testing for RV64GC Linux platform
+- [x] Porting base Register JIT architecture to RISC-V
 - [ ] Porting complete JIT architecture to RISC-V
 - [ ] Cross Compile Spidermonkey on RV64GC Linux platform
 - [X] Native Compile Spidermonkey on RV64GC Linux platform
     - [X] Native Compile using Emulator (QEMU/ TinyEMU)
     - [ ] Native Compile using RISC-V Unleashed Board
+- [x] Added Scripts for JIT support to riscv64
+- [x] Added Github Wiki Doc Page for Gecko Dev Riscv
+- [x] Generated Documentations and reports
+- [x] Generated Shell Script and setup for Build Test Environment
 - [ ] Upstreaming changes for code review
 
 ## Upstreaming
